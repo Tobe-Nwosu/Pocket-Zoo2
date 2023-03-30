@@ -4,9 +4,9 @@
   <% if @finding.photo.attached? %>
         <%= cl_image_tag @finding.photo.key, crop: :fill, class: "card-vertical-cover-img-large" %>
         <% else %>
-        <%= image_tag @finding.picture, class: "card-img-top card-vertical-cover-img-large", crop: :fill %>
-        <% end %>
-  <% if @finding.user == current_user %>
+        <%= image_gtag @finding.picture, class: "card-img-top card-vertical-cover-img-large", crop: :fill %>
+        <% end %>g
+  <% if @finding.user == current_user %><p>Hi</p>
     <% name_placeholder = 'You' %>
   <% else %>
     <% name_placeholder = @finding.user.username %>
